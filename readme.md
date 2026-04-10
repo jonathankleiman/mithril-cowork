@@ -130,17 +130,69 @@ Documents are generated in the workspace and can be previewed, edited, and expor
 
 ---
 
-## Features
+## Always-On AI Agents
 
-Beyond legal tools, Mithril Cowork includes:
+Mithril Cowork isn't just a chat client — it's a cowork platform where AI agents run alongside you on your computer, reading files, drafting documents, and automating tasks. You see everything the agent does, and you're always in control.
 
-- **Multi-Agent Mode** — run Claude Code, Codex, Gemini CLI, and other agents side by side
+### Built-in Agent — Install & Go
+
+The app ships with a complete AI agent engine. No CLI tools to install, no complex setup — add an API key or connect Ollama and the agent is ready to work. Full capabilities out of the box: file read/write, web search, image generation, MCP tool use.
+
+### Multi-Agent Mode
+
+Already use Claude Code, Codex, Gemini CLI, or other CLI agents? Mithril Cowork auto-detects them and lets you run them all through one unified interface — alongside the built-in agent.
+
+**Supported agents:** Built-in Agent • Claude Code • Codex • Qwen Code • Goose AI • OpenClaw • Gemini CLI • GitHub Copilot • and more
+
+- **Auto Detection** — recognizes installed CLI tools automatically
+- **Unified Interface** — one workspace for all your AI agents
+- **Parallel Sessions** — run multiple agents simultaneously with independent context
+- **Shared MCP Tools** — configure MCP servers once, automatically available to all agents
+
+---
+
+## Scheduled Tasks — 24/7 Automation
+
+Set up tasks once and let them run automatically on schedule — truly unattended operation.
+
+- **Natural Language** — describe what you want done, just like chatting
+- **Flexible Scheduling** — daily, weekly, monthly, or custom cron expressions
+- **Legal use cases:** daily docket checks, weekly billing summaries, deadline reminder notifications, automated report generation
+
+Each scheduled task is bound to a conversation, maintaining full context and history across runs.
+
+---
+
+## Remote Access — Work from Anywhere
+
+Access Mithril Cowork from any device, not just the desktop where it's installed.
+
+### WebUI Mode
+
+Access via browser from your phone, tablet, or any computer. Supports LAN, cross-network, and server deployment. QR code or password login.
+
+### Chat Platform Integration
+
+Connect your AI workspace to messaging platforms for on-the-go access:
+
+- **Telegram** — cowork with your AI agent directly from Telegram
+- **Slack** — integrate into your team's existing workflow
+- **Lark (Feishu)** — enterprise collaboration via Feishu bots
+- **DingTalk** — AI Card streaming with automatic fallback
+
+> **Setup:** Settings → WebUI → Channel, configure the Bot Token.
+
+---
+
+## More Features
+
 - **File Workspace** — drag-and-drop files, preview 10+ formats (PDF, Word, Excel, images, code)
-- **Scheduled Tasks** — set up cron jobs for automated report generation or deadline reminders
-- **WebUI Remote Access** — access from your phone or browser over LAN
 - **MCP Integration** — configure Model Context Protocol tools once, available to all agents
 - **Custom Themes** — built-in Mithril theme (green/gold) with light and dark modes
 - **Version History** — Git-based file versioning in the workspace
+- **AI Image Generation** — text-to-image, editing, and recognition powered by Gemini
+- **Multi-Task Parallel** — open multiple conversations with independent context, run tasks simultaneously
+- **CSS Customization** — fully customize the interface with your own CSS
 
 ---
 
