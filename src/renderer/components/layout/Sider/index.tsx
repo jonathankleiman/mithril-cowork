@@ -90,6 +90,7 @@ const Sider: React.FC<SiderProps> = ({ onSessionClick, collapsed = false }) => {
   }, [globalMutate, refreshTeams, renameId, renameName, t]);
 
   const sortedTeams = useMemo(() => {
+    if (!Array.isArray(teams)) return [];
     const pinned = teams.filter((team) => pinnedIds.includes(team.id));
     const unpinned = teams.filter((team) => !pinnedIds.includes(team.id));
     return [...pinned, ...unpinned];

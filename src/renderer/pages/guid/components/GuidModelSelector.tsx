@@ -50,6 +50,7 @@ const GuidModelSelector: React.FC<GuidModelSelectorProps> = ({
 
   // 过滤掉被禁用的 provider
   const enabledModelList = React.useMemo(() => {
+    if (!Array.isArray(modelList)) return [];
     return modelList.filter((p) => p.enabled !== false);
   }, [modelList]);
 

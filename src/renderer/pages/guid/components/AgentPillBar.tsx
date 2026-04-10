@@ -53,7 +53,7 @@ const AgentPillBar: React.FC<AgentPillBarProps> = ({
           color: 'var(--text-primary)',
         }}
       >
-        {availableAgents
+        {(Array.isArray(availableAgents) ? availableAgents : [])
           .filter(
             (agent) => agent.backend !== 'custom' || agent.isExtension || (agent.customAgentId && !agent.isPreset)
           )

@@ -593,7 +593,13 @@ const getBuiltinAssistants = (): AcpBackendConfig[] => {
       preset.id === 'star-office-helper' ||
       preset.id === 'story-roleplay' ||
       preset.id === 'moltbook' ||
-      preset.id === 'beautiful-mermaid';
+      preset.id === 'beautiful-mermaid' ||
+      preset.id === 'mithril-general' ||
+      preset.id === 'contract-drafter' ||
+      preset.id === 'case-researcher' ||
+      preset.id === 'court-form-filler' ||
+      preset.id === 'client-intake' ||
+      preset.id === 'deadline-tracker';
 
     assistants.push({
       id: `builtin-${preset.id}`,
@@ -957,7 +963,8 @@ const initStorage = async () => {
 
     // 5.2 初始化助手配置（只包含元数据，不包含 context）
     // Initialize assistant config (metadata only, no context)
-    const existingAgents = (await configFile.get('acp.customAgents').catch((): undefined => undefined)) || [];
+    const rawAgents = await configFile.get('acp.customAgents').catch((): undefined => undefined);
+    const existingAgents = Array.isArray(rawAgents) ? rawAgents : [];
     const builtinAssistants = getBuiltinAssistants();
 
     // 5.2.1 检查是否需要迁移：修复老版本中所有助手都默认启用的问题

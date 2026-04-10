@@ -302,7 +302,7 @@ const AssistantSelectionArea: React.FC<AssistantSelectionAreaProps> = ({
   return (
     <div className='mt-12px w-full'>
       <div className='flex flex-wrap gap-8px justify-center'>
-        {customAgents
+        {(Array.isArray(customAgents) ? customAgents : [])
           .filter((a) => a.isPreset && a.enabled !== false)
           .toSorted((a, b) => {
             if (a.id === 'cowork') return -1;

@@ -431,8 +431,8 @@ const GuidPage: React.FC = () => {
   const filteredModelList = useMemo(
     () =>
       isAionrs
-        ? modelSelection.modelList.filter((p) => !p.platform?.toLowerCase().includes('gemini-with-google-auth'))
-        : modelSelection.modelList,
+        ? (Array.isArray(modelSelection.modelList) ? modelSelection.modelList : []).filter((p) => !p.platform?.toLowerCase().includes('gemini-with-google-auth'))
+        : (Array.isArray(modelSelection.modelList) ? modelSelection.modelList : []),
     [isAionrs, modelSelection.modelList]
   );
 

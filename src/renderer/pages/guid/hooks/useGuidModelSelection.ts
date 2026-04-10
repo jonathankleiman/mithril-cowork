@@ -49,7 +49,7 @@ export const useGuidModelSelection = (): GuidModelSelectionResult => {
   const { geminiModeOptions, isGoogleAuth } = useGeminiGoogleAuthModels();
   const { data: modelConfig } = useSWR('model.config.welcome', () => {
     return ipcBridge.mode.getModelConfig.invoke().then((data) => {
-      return (data || []).filter((platform) => !!platform.model.length);
+      return (Array.isArray(data) ? data : []).filter((platform) => !!platform.model.length);
     });
   });
 
@@ -57,6 +57,8 @@ export const useGuidModelSelection = (): GuidModelSelectionResult => {
 
   const modelList = useMemo(() => {
     let allProviders: IProvider[] = [];
+
+    const safeModelConfig = Array.isArray(modelConfig) ? modelConfig : [];
 
     if (isGoogleAuth) {
       const geminiProvider: IProvider = {
@@ -68,9 +70,9 @@ export const useGuidModelSelection = (): GuidModelSelectionResult => {
         model: geminiModelValues,
         capabilities: [{ type: 'text' }, { type: 'vision' }, { type: 'function_calling' }],
       };
-      allProviders = [geminiProvider, ...(modelConfig || [])];
+      allProviders = [geminiProvider, ...safeModelConfig];
     } else {
-      allProviders = modelConfig || [];
+      allProviders = safeModelConfig;
     }
 
     return allProviders.filter(hasAvailableModels);
