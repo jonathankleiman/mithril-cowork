@@ -42,7 +42,7 @@ export const useCustomAgentsLoader = ({
     ])
       .then(([agents, extAssistants]) => {
         if (!isActive) return;
-        const list = (agents || []).filter((agent: AcpBackendConfig) => {
+        const list = (Array.isArray(agents) ? agents : []).filter((agent: AcpBackendConfig) => {
           // Keep preset assistants visible on Guid homepage even when ACP detection
           // has not produced custom IDs yet (startup race / transient detection failure).
           if (agent.isPreset) return true;

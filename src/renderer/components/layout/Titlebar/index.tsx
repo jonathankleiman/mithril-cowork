@@ -29,12 +29,24 @@ interface TitlebarProps {
 
 const AionLogoMark: React.FC = () => (
   <svg className='app-titlebar__brand-logo' viewBox='0 0 80 80' fill='none' aria-hidden='true' focusable='false'>
+    {/* Mithril shield */}
     <path
-      d='M40 20 Q38 22 25 40 Q23 42 26 42 L30 42 Q32 40 40 30 Q48 40 50 42 L54 42 Q57 42 55 40 Q42 22 40 20'
-      fill='currentColor'
-    ></path>
-    <circle cx='40' cy='46' r='3' fill='currentColor'></circle>
-    <path d='M18 50 Q40 70 62 50' stroke='currentColor' strokeWidth='3.5' fill='none' strokeLinecap='round'></path>
+      d='M40 10 L65 22 L65 46 Q65 64 40 74 Q15 64 15 46 L15 22 Z'
+      fill='none'
+      stroke='currentColor'
+      strokeWidth='3'
+      strokeLinejoin='round'
+    />
+    {/* Sword blade */}
+    <rect x='38.5' y='24' width='3' height='28' rx='1' fill='currentColor' opacity='0.9' />
+    {/* Crossguard */}
+    <rect x='33' y='50' width='14' height='2.5' rx='1.25' fill='currentColor' opacity='0.8' />
+    {/* Scale arms */}
+    <line x1='40' y1='24' x2='28' y2='31' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' opacity='0.8' />
+    <line x1='40' y1='24' x2='52' y2='31' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' opacity='0.8' />
+    {/* Scale dishes */}
+    <path d='M23 35 Q28 39 33 35' stroke='currentColor' strokeWidth='1.5' fill='none' strokeLinecap='round' opacity='0.8' />
+    <path d='M47 35 Q52 39 57 35' stroke='currentColor' strokeWidth='1.5' fill='none' strokeLinecap='round' opacity='0.8' />
   </svg>
 );
 
