@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a7c59"/>
+      <stop offset="100%" stop-color="#2d4f37"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#e0e0e0" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect width="1024" height="1024" rx="220" fill="url(#bg)"/>
+  <!-- Shield -->
+  <path d="M512 160 L800 290 L800 580 Q800 790 512 900 Q224 790 224 580 L224 290 Z"
+        fill="none" stroke="url(#shield)" stroke-width="28" stroke-linejoin="round"/>
+  <!-- Inner shield line -->
+  <path d="M512 220 L750 330 L750 560 Q750 740 512 840 Q274 740 274 560 L274 330 Z"
+        fill="none" stroke="white" stroke-width="6" stroke-linejoin="round" opacity="0.3"/>
+  <!-- Sword blade -->
+  <rect x="498" y="300" width="28" height="340" rx="6" fill="white" opacity="0.9"/>
+  <!-- Crossguard -->
+  <rect x="440" y="620" width="144" height="20" rx="10" fill="#d4af37"/>
+  <!-- Grip -->
+  <rect x="500" y="640" width="24" height="80" rx="5" fill="#c4a030"/>
+  <!-- Pommel -->
+  <circle cx="512" cy="740" r="16" fill="#d4af37"/>
+  <!-- Scale left arm -->
+  <line x1="512" y1="300" x2="370" y2="380" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+  <line x1="370" y1="380" x2="370" y2="440" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+  <!-- Scale left dish -->
+  <path d="M320 440 Q370 480 420 440" stroke="white" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <!-- Scale right arm -->
+  <line x1="512" y1="300" x2="654" y2="380" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+  <line x1="654" y1="380" x2="654" y2="440" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+  <!-- Scale right dish -->
+  <path d="M604 440 Q654 480 704 440" stroke="white" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.85"/>
+</svg>
