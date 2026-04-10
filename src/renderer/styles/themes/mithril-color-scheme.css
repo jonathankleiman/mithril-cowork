@@ -7,6 +7,10 @@
 /* Light Mode */
 :root,
 [data-color-scheme='mithril'] {
+  /* Typography */
+  --font-heading: 'Lora', 'Times New Roman', serif;
+  --font-body: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+
   /* Mithril Brand Colors - Light Mode (warm sage green) */
   --aou-1: #f5f3f0;
   --aou-2: #e8e4de;

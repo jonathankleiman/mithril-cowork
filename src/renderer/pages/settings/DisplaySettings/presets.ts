@@ -7,7 +7,6 @@
 import type { ICssTheme } from '@/common/config/storage.ts';
 
 import {
-  defaultThemeCover,
   misakaMikotoCover,
   helloKittyCover,
   retroWindowsCover,
@@ -38,9 +37,8 @@ export const DEFAULT_THEME_ID = 'default-theme';
 export const PRESET_THEMES: ICssTheme[] = [
   {
     id: DEFAULT_THEME_ID,
-    name: 'Default',
+    name: 'Mithril',
     isPreset: true,
-    cover: defaultThemeCover,
     css: defaultCss,
     createdAt: Date.now(),
     updatedAt: Date.now(),
