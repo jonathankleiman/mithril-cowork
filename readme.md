@@ -225,6 +225,17 @@ Download the latest release for your platform:
 
 ## Build from Source
 
+### Prerequisites
+
+- **Node.js** 18+ and **npm**
+- **Bun** — the build toolchain uses `bunx` under the hood. Install via [bun.sh](https://bun.sh):
+  ```bash
+  curl -fsSL https://bun.sh/install | bash
+  ```
+- **macOS only:** Xcode Command Line Tools (`xcode-select --install`)
+
+### Development
+
 ```bash
 # Clone the repo
 git clone https://github.com/jonathankleiman/mithril-cowork.git
@@ -233,23 +244,67 @@ cd mithril-cowork
 # Install dependencies
 npm install
 
-# Development mode
+# Development mode (hot-reload)
 npm run dev
+```
 
-# Build for your platform
-npm run dist:mac    # macOS
+### Building for macOS (recommended)
+
+Use the included build script — it generates the `.icns` icon from `resources/app.png` automatically, then builds the `.dmg`:
+
+```bash
+bash scripts/build-mac.sh
+```
+
+This runs `sips` + `iconutil` to create the macOS icon set, then calls `npm run dist:mac`. The output `.dmg` is in the `dist/` directory.
+
+> **Important:** Always use `bash scripts/build-mac.sh` instead of running `npm run dist:mac` directly. The script ensures the `.icns` icon is regenerated from the latest `resources/app.png`. Running `dist:mac` alone may produce a build with a stale or missing dock icon.
+
+### Building for Other Platforms
+
+```bash
 npm run dist:win    # Windows
 npm run dist:linux  # Linux
 ```
 
-### macOS Build Script
+---
 
-A helper script is included for macOS builds (generates .icns icon automatically):
+## Troubleshooting
+
+### OpenCode permission error on first launch
+
+If you see an error like:
+
+```
+EACCES: permission denied, mkdir '.../.local/state/opencode/locks'
+```
+
+OpenCode needs a directory that doesn't exist yet. Create it before launching:
 
 ```bash
-chmod +x scripts/build-mac.sh
-./scripts/build-mac.sh
+mkdir -p ~/.local/state/opencode/locks
 ```
+
+This only needs to be done once.
+
+### macOS: "App is damaged" or Gatekeeper warning
+
+Since Mithril Cowork is not notarized with Apple, macOS may block it. After installing:
+
+```bash
+xattr -cr /Applications/Mithril\ Cowork.app
+```
+
+### Dock icon shows wrong icon (macOS)
+
+If the dock icon doesn't match the Mithril shield, you likely built with `npm run dist:mac` instead of the build script. Rebuild with:
+
+```bash
+rm -f resources/app.icns
+bash scripts/build-mac.sh
+```
+
+This regenerates `app.icns` from `resources/app.png` and rebuilds the app.
 
 ---
 
