@@ -1,0 +1,142 @@
+/* Mithril Cowork Color Scheme - Legal Green Theme */
+
+/* Light Mode */
+:root,
+[data-color-scheme='mithril'] {
+  /* Mithril Brand Colors - Light Mode (green-based) */
+  --aou-1: #eef4f0;
+  --aou-2: #dce8e0;
+  --aou-3: #c2d6c9;
+  --aou-4: #a3c1ad;
+  --aou-5: #7fa98d;
+  --aou-6: #5e9170;
+  --aou-7: #4a7c59;
+  --aou-8: #3a6247;
+  --aou-9: #2a4733;
+  --aou-10: #1a2d20;
+
+  /* Background Colors - Light Mode */
+  --bg-base: #ffffff;
+  --bg-1: #f8faf9;
+  --bg-2: #f1f4f2;
+  --bg-3: #e2e7e4;
+  --bg-4: #c9d1cc;
+  --bg-5: #adb8b2;
+  --bg-6: #86938c;
+  --bg-8: #4e5b55;
+  --bg-9: #1d2621;
+  --bg-10: #0c100e;
+
+  /* Interactive State Colors - Light Mode */
+  --bg-hover: #f2f6f4;
+  --bg-active: #e2e7e4;
+
+  /* Text Colors - Light Mode */
+  --text-primary: #1a2d20;
+  --text-secondary: #86938c;
+  --text-disabled: #c9d1cc;
+
+  /* Semantic Colors - Light Mode */
+  --primary: #4a7c59;
+  --success: #2d8a4e;
+  --warning: #d4a017;
+  --danger: #c0392b;
+  --info: #2980b9;
+
+  /* Border Colors - Light Mode */
+  --border-base: #e2e7e4;
+  --border-light: #f1f4f2;
+
+  /* Brand Colors - Light Mode */
+  --brand: #4a7c59;
+  --brand-light: #eef4f0;
+  --brand-hover: #3a6247;
+
+  /* Message & UI Component Colors - Light Mode */
+  --message-user-bg: #e8f0eb;
+  --message-tips-bg: #eef4f0;
+  --workspace-btn-bg: #eff2f0;
+
+  /* Special Colors - Light Mode */
+  --fill: #f7f9f8;
+  --inverse: #ffffff;
+
+  /* Custom Colors - Light Mode */
+  --dialog-fill-0: #ffffff;
+  --text-0: #000000;
+  --text-white: #ffffff;
+  --fill-0: #ffffff;
+  --fill-white-to-black: #ffffff;
+  --border-special: var(--bg-3);
+  --color-guid-agent-bar: #e8f0eb;
+}
+
+/* Dark Mode */
+[data-color-scheme='mithril'][data-theme='dark'] {
+  /* Mithril Brand Colors - Dark Mode */
+  --aou-1: #1a2d20;
+  --aou-2: #2a3d30;
+  --color-guid-agent-bar: var(--aou-2);
+  --aou-3: #3a5040;
+  --aou-4: #4a6450;
+  --aou-5: #5e7d68;
+  --aou-6: #7a9d85;
+  --aou-7: #96b8a2;
+  --aou-8: #b5d0bf;
+  --aou-9: #d4e5da;
+  --aou-10: #eef4f0;
+
+  /* Background Colors - Dark Mode */
+  --bg-base: #0a0f0c;
+  --bg-1: #141c17;
+  --bg-2: #1e2822;
+  --bg-3: #2a3630;
+  --bg-4: #374440;
+  --bg-5: #445350;
+  --bg-6: #526260;
+  --bg-8: #6b7e78;
+  --bg-9: #9aaba4;
+  --bg-10: #c8d5ce;
+
+  /* Interactive State Colors - Dark Mode */
+  --bg-hover: #182119;
+  --bg-active: #253028;
+
+  /* Text Colors - Dark Mode */
+  --text-primary: #dce8e0;
+  --text-secondary: #9aaba4;
+  --text-disabled: #6b7e78;
+
+  /* Semantic Colors - Dark Mode */
+  --primary: #6aad7b;
+  --success: #4eca6f;
+  --warning: #f0c040;
+  --danger: #e74c3c;
+  --info: #5dade2;
+
+  /* Border Colors - Dark Mode */
+  --border-base: #2a3630;
+  --border-light: #1e2822;
+
+  /* Brand Colors - Dark Mode */
+  --brand: #7aad8a;
+  --brand-light: #2a3d30;
+  --brand-hover: #5e8d6e;
+
+  /* Message & UI Component Colors - Dark Mode */
+  --message-user-bg: #1a2e22;
+  --message-tips-bg: #152418;
+  --workspace-btn-bg: #182119;
+
+  /* Special Colors - Dark Mode */
+  --fill: #141c17;
+  --inverse: #ffffff;
+
+  /* Custom Colors - Dark Mode */
+  --dialog-fill-0: #2a3630;
+  --text-0: #ffffff;
+  --text-white: #ffffff;
+  --fill-0: rgba(255, 255, 255, 0.08);
+  --fill-white-to-black: #000000;
+  --border-special: #4a6455;
+}

@@ -715,4 +715,139 @@ export const ASSISTANT_PRESETS: AssistantPreset[] = [
       'zh-CN': ['开始一个勇敢战士的史诗奇幻冒险', '创建一个有背景故事和个性的详细角色', '在科幻设定中开始一个互动故事'],
     },
   },
+  // ── Mithril Law Legal Assistants ──────────────────────────────────
+  {
+    id: 'mithril-general',
+    avatar: '🛡️',
+    resourceDir: 'src/process/resources/assistant/mithril-general',
+    ruleFiles: {
+      'en-US': 'mithril-general.md',
+    },
+    defaultEnabledSkills: ['officecli-docx'],
+    nameI18n: {
+      'en-US': 'Mithril General',
+    },
+    descriptionI18n: {
+      'en-US':
+        'General-purpose legal AI assistant for Mithril Law. Draft documents, conduct research, calculate deadlines, and manage matters.',
+    },
+    promptsI18n: {
+      'en-US': [
+        'Draft a demand letter for breach of contract — the other party owes $15,000 for unpaid invoices',
+        'What are the limitation periods for filing a wrongful dismissal claim in Ontario?',
+        'Analyze this employment contract and flag any concerning clauses',
+      ],
+    },
+  },
+  {
+    id: 'contract-drafter',
+    avatar: '📜',
+    resourceDir: 'src/process/resources/assistant/contract-drafter',
+    ruleFiles: {
+      'en-US': 'contract-drafter.md',
+    },
+    defaultEnabledSkills: ['officecli-docx'],
+    nameI18n: {
+      'en-US': 'Contract Drafter',
+    },
+    descriptionI18n: {
+      'en-US':
+        'Draft professional legal agreements — retainer letters, demand letters, NDAs, service agreements, and more. Ontario law compliant.',
+    },
+    promptsI18n: {
+      'en-US': [
+        'Draft a retainer agreement for a small claims matter — $3,500 flat fee, scope limited to trial',
+        'Create an NDA for a tech startup protecting trade secrets and client lists',
+        'Write a demand letter for $12,000 in unpaid freelance design work',
+      ],
+    },
+  },
+  {
+    id: 'case-researcher',
+    avatar: '🔍',
+    resourceDir: 'src/process/resources/assistant/case-researcher',
+    ruleFiles: {
+      'en-US': 'case-researcher.md',
+    },
+    nameI18n: {
+      'en-US': 'Case Researcher',
+    },
+    descriptionI18n: {
+      'en-US':
+        'Legal research specialist — finds relevant case law, analyzes statutes, and produces professional research memoranda with proper citations.',
+    },
+    promptsI18n: {
+      'en-US': [
+        'Research the enforceability of non-compete clauses in Ontario employment contracts post-Working for Workers Act',
+        'Find leading cases on constructive dismissal damages calculation in Ontario',
+        'What is the legal test for summary judgment under Rule 20 of the Rules of Civil Procedure?',
+      ],
+    },
+  },
+  {
+    id: 'court-form-filler',
+    avatar: '⚖️',
+    resourceDir: 'src/process/resources/assistant/court-form-filler',
+    ruleFiles: {
+      'en-US': 'court-form-filler.md',
+    },
+    nameI18n: {
+      'en-US': 'Court Form Filler',
+    },
+    descriptionI18n: {
+      'en-US':
+        "Prepare Ontario court forms accurately — Small Claims (Form 7A, 9A, 14A), Superior Court (Form 14A, 18A), and more. Includes filing instructions.",
+    },
+    promptsI18n: {
+      'en-US': [
+        'Fill out a Small Claims Form 7A Plaintiff\'s Claim for $8,500 in unpaid rent',
+        'Prepare a Form 14A Offer to Settle for a small claims dispute at 75% of the claimed amount',
+        'What forms do I need to file a defence and defendant\'s claim in Small Claims Court?',
+      ],
+    },
+  },
+  {
+    id: 'client-intake',
+    avatar: '👤',
+    resourceDir: 'src/process/resources/assistant/client-intake',
+    ruleFiles: {
+      'en-US': 'client-intake.md',
+    },
+    nameI18n: {
+      'en-US': 'Client Intake',
+    },
+    descriptionI18n: {
+      'en-US':
+        'Structured client intake interviews — gathers contact info, matter details, conflict check data, and generates comprehensive matter summaries.',
+    },
+    promptsI18n: {
+      'en-US': [
+        'Start a new client intake for a wrongful dismissal matter',
+        'Begin intake for a small claims dispute over a home renovation gone wrong',
+        'Generate a client matter summary from intake notes',
+      ],
+    },
+  },
+  {
+    id: 'deadline-tracker',
+    avatar: '⏰',
+    resourceDir: 'src/process/resources/assistant/deadline-tracker',
+    ruleFiles: {
+      'en-US': 'deadline-tracker.md',
+    },
+    nameI18n: {
+      'en-US': 'Deadline Tracker',
+    },
+    descriptionI18n: {
+      'en-US':
+        'Calculate limitation periods, filing deadlines, and court timelines. Never miss a critical date — covers Ontario civil, employment, criminal, and administrative law.',
+    },
+    promptsI18n: {
+      'en-US': [
+        'My client was terminated on March 15, 2026. What are all the relevant deadlines?',
+        'Calculate limitation periods for a breach of contract that occurred on January 10, 2025 but was discovered on June 1, 2025',
+        'What are the timelines after filing a Statement of Claim in Superior Court?',
+      ],
+    },
+  },
 ];

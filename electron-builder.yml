@@ -1,12 +1,12 @@
-appId: com.aionui.app
-productName: AionUi
-executableName: AionUi
-copyright: Copyright © 2024 AionUi
+appId: com.mithril.cowork
+productName: Mithril Cowork
+executableName: MithrilCowork
+copyright: Copyright © 2026 Mithril Law
 
 protocols:
-  - name: AionUi Protocol
+  - name: Mithril Cowork Protocol
     schemes:
-      - aionui
+      - mithril
 
 asar:
   smartUnpack: true
@@ -173,17 +173,17 @@ linux:
   icon: resources/app.png
   artifactName: ${productName}-${version}-${os}-${arch}.${ext}
   category: Utility
-  maintainer: aionui
-  vendor: aionui
+  maintainer: mithril
+  vendor: mithril
   synopsis: ${description}
   description: ${description}
   desktop:
     entry:
-      Name: AionUi
+      Name: Mithril Cowork
       Comment: ${description}
-      Icon: aionui
+      Icon: mithril-cowork
       Categories: Office;Utility;
-      MimeType: x-scheme-handler/aionui;
+      MimeType: x-scheme-handler/mithril;
 
 npmRebuild: false
 buildDependenciesFromSource: false
@@ -225,7 +225,7 @@ electronDownload:
 
 publish:
   provider: github
-  owner: iOfficeAI
-  repo: AionUi
+  owner: mithril-law
+  repo: mithril-cowork
   publishAutoUpdate: true
   releaseType: release
