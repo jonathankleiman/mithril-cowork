@@ -118,9 +118,21 @@ Mithril Cowork supports major AI providers out of the box:
 
 ---
 
+## Document Generation — OfficeCLI
+
+Mithril Cowork includes [OfficeCLI](https://github.com/iOfficeAI/OfficeCli) for producing real, editable office documents directly from AI conversations:
+
+- **Word (.docx)** — generate contracts, memos, letters, and court filings as proper Word documents
+- **Excel (.xlsx)** — create spreadsheets for costs outlines, billing summaries, and data analysis
+- **PowerPoint (.pptx)** — build presentations for client pitches, case summaries, and CLEs
+
+Documents are generated in the workspace and can be previewed, edited, and exported immediately.
+
+---
+
 ## Features
 
-Beyond legal tools, Mithril Cowork inherits the full AionUI feature set:
+Beyond legal tools, Mithril Cowork includes:
 
 - **Multi-Agent Mode** — run Claude Code, Codex, Gemini CLI, and other agents side by side
 - **File Workspace** — drag-and-drop files, preview 10+ formats (PDF, Word, Excel, images, code)
@@ -128,7 +140,6 @@ Beyond legal tools, Mithril Cowork inherits the full AionUI feature set:
 - **WebUI Remote Access** — access from your phone or browser over LAN
 - **MCP Integration** — configure Model Context Protocol tools once, available to all agents
 - **Custom Themes** — built-in Mithril theme (green/gold) with light and dark modes
-- **Document Generation** — create Word docs, Excel spreadsheets, presentations
 - **Version History** — Git-based file versioning in the workspace
 
 ---
