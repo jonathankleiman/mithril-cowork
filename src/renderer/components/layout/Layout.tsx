@@ -448,9 +448,10 @@ const Layout: React.FC<{
                 )}
               >
                 <div
-                  className={classNames('bg-black shrink-0 size-40px relative rd-0.5rem', {
+                  className={classNames('shrink-0 size-40px relative rd-0.5rem', {
                     '!size-24px': collapsed,
                   })}
+                  style={{ background: 'var(--brand, #1b6242)' }}
                   onClick={onClick}
                 >
                   <svg
@@ -460,23 +461,27 @@ const Layout: React.FC<{
                     viewBox='0 0 80 80'
                     fill='none'
                   >
+                    {/* Mithril shield */}
                     <path
-                      key='logo-path-1'
-                      d='M40 20 Q38 22 25 40 Q23 42 26 42 L30 42 Q32 40 40 30 Q48 40 50 42 L54 42 Q57 42 55 40 Q42 22 40 20'
-                      fill='white'
-                    ></path>
-                    <circle key='logo-circle' cx='40' cy='46' r='3' fill='white'></circle>
-                    <path
-                      key='logo-path-2'
-                      d='M18 50 Q40 70 62 50'
-                      stroke='white'
-                      strokeWidth='3.5'
+                      d='M40 12 L62 23 L62 44 Q62 60 40 70 Q18 60 18 44 L18 23 Z'
                       fill='none'
-                      strokeLinecap='round'
-                    ></path>
+                      stroke='white'
+                      strokeWidth='2.5'
+                      strokeLinejoin='round'
+                    />
+                    {/* Sword blade */}
+                    <rect x='38.5' y='25' width='3' height='24' rx='1' fill='white' opacity='0.9' />
+                    {/* Crossguard */}
+                    <rect x='34' y='47' width='12' height='2' rx='1' fill='white' opacity='0.8' />
+                    {/* Scale arms */}
+                    <line x1='40' y1='25' x2='30' y2='31' stroke='white' strokeWidth='1.5' strokeLinecap='round' opacity='0.8' />
+                    <line x1='40' y1='25' x2='50' y2='31' stroke='white' strokeWidth='1.5' strokeLinecap='round' opacity='0.8' />
+                    {/* Scale dishes */}
+                    <path d='M25 34 Q30 37 35 34' stroke='white' strokeWidth='1.5' fill='none' strokeLinecap='round' opacity='0.8' />
+                    <path d='M45 34 Q50 37 55 34' stroke='white' strokeWidth='1.5' fill='none' strokeLinecap='round' opacity='0.8' />
                   </svg>
                 </div>
-                <div className='flex-1 text-20px text-1 collapsed-hidden font-bold'>AionUi</div>
+                <div className='flex-1 text-20px text-1 collapsed-hidden font-bold'>Mithril</div>
                 {isMobile && !collapsed && (
                   <button
                     type='button'
