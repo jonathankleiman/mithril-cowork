@@ -106,7 +106,7 @@ export function createMainMenuCard(): LarkCard {
   return {
     config: { wide_screen_mode: true },
     header: {
-      title: { tag: 'plain_text', content: 'AionUi Assistant' },
+      title: { tag: 'plain_text', content: 'Mithril Cowork Assistant' },
       template: 'blue',
     },
     elements: [
@@ -421,7 +421,7 @@ export function createHelpCard(): LarkCard {
   return {
     config: { wide_screen_mode: true },
     header: {
-      title: { tag: 'plain_text', content: '❓ AionUi Assistant Help' },
+      title: { tag: 'plain_text', content: '❓ Mithril Cowork Assistant Help' },
       template: 'turquoise',
     },
     elements: [
