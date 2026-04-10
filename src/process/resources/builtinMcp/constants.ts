@@ -10,6 +10,10 @@ export const BUILTIN_IMAGE_GEN_ID = 'builtin-image-gen';
 export const BUILTIN_IMAGE_GEN_NAME = 'aionui-image-generation';
 export const BUILTIN_IMAGE_GEN_LEGACY_NAMES = ['AionUi Image Generation', BUILTIN_IMAGE_GEN_ID] as const;
 
+// Mithril Legal Tools — built-in MCP server for Ontario law practice
+export const MITHRIL_LEGAL_ID = 'mithril-legal-tools';
+export const MITHRIL_LEGAL_NAME = 'mithril-legal-tools';
+
 export function isBuiltinImageGenName(name?: string | null): boolean {
   if (!name) return false;
   return (

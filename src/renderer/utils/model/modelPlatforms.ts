@@ -12,31 +12,15 @@
  * Centralized management of all model platform configurations for extensibility and maintainability
  */
 
-// Provider Logo imports
+// Provider Logo imports — curated for Mithril Cowork
 import GeminiLogo from '@/renderer/assets/logos/ai-major/gemini.svg';
 import OpenAILogo from '@/renderer/assets/logos/ai-major/openai.svg';
 import AnthropicLogo from '@/renderer/assets/logos/ai-major/anthropic.svg';
 import BedrockLogo from '@/renderer/assets/logos/ai-cloud/bedrock.svg';
 import DeepSeekLogo from '@/renderer/assets/logos/ai-major/deepseek.svg';
 import OpenRouterLogo from '@/renderer/assets/logos/ai-cloud/openrouter.svg';
-import SiliconFlowLogo from '@/renderer/assets/logos/ai-cloud/siliconflow.png';
-import QwenLogo from '@/renderer/assets/logos/ai-china/qwen.svg';
-import KimiLogo from '@/renderer/assets/logos/ai-china/kimi.svg';
-import ZhipuLogo from '@/renderer/assets/logos/ai-china/zhipu.svg';
 import XaiLogo from '@/renderer/assets/logos/ai-major/xai.svg';
-import VolcengineLogo from '@/renderer/assets/logos/ai-china/volcengine.svg';
-import BaiduLogo from '@/renderer/assets/logos/ai-china/baidu.svg';
-import TencentLogo from '@/renderer/assets/logos/ai-china/tencent.svg';
-import LingyiLogo from '@/renderer/assets/logos/ai-china/lingyiwanwu.svg';
-import PoeLogo from '@/renderer/assets/logos/ai-cloud/poe.svg';
-import ModelScopeLogo from '@/renderer/assets/logos/ai-cloud/modelscope.svg';
-import InfiniAILogo from '@/renderer/assets/logos/ai-cloud/infiniai.svg';
-import CtyunLogo from '@/renderer/assets/logos/ai-cloud/ctyun.svg';
-import StepFunLogo from '@/renderer/assets/logos/ai-china/stepfun.svg';
-import MiniMaxLogo from '@/renderer/assets/logos/ai-china/minimax.png';
 import NewApiLogo from '@/renderer/assets/logos/ai-cloud/newapi.svg';
-import NovitaLogo from '@/renderer/assets/logos/ai-cloud/novita.svg';
-import PPIOLogo from '@/renderer/assets/logos/ai-cloud/ppio.svg';
 
 /**
  * 平台类型
@@ -74,24 +58,18 @@ export interface PlatformConfig {
  * 4+ 预设供应商
  */
 export const MODEL_PLATFORMS: PlatformConfig[] = [
-  // 自定义选项（需要用户输入 base url）/ Custom option (requires user to input base url)
-  { name: 'Custom', value: 'custom', logo: null, platform: 'custom', i18nKey: 'settings.platformCustom' },
+  // ── Mithril Cowork — curated provider list ──────────────────────────
 
-  // New API 多模型网关 / New API multi-model gateway
-  { name: 'New API', value: 'new-api', logo: NewApiLogo, platform: 'new-api', i18nKey: 'settings.platformNewApi' },
-
-  // 官方 Gemini 平台
+  // Ollama (local or Ollama Cloud) — recommended default for Mithril
   {
-    name: 'Gemini',
-    value: 'gemini',
-    logo: GeminiLogo,
-    platform: 'gemini',
-    baseUrl: 'https://generativelanguage.googleapis.com',
+    name: 'Ollama (Local)',
+    value: 'Ollama-Local',
+    logo: null,
+    platform: 'custom',
+    baseUrl: 'http://localhost:11434/v1',
   },
-  { name: 'Gemini (Vertex AI)', value: 'gemini-vertex-ai', logo: GeminiLogo, platform: 'gemini-vertex-ai' },
 
-  // 预设供应商（按字母顺序排列）
-  { name: 'OpenAI', value: 'OpenAI', logo: OpenAILogo, platform: 'custom', baseUrl: 'https://api.openai.com/v1' },
+  // Major cloud providers
   {
     name: 'Anthropic',
     value: 'Anthropic',
@@ -99,12 +77,13 @@ export const MODEL_PLATFORMS: PlatformConfig[] = [
     platform: 'anthropic',
     baseUrl: 'https://api.anthropic.com',
   },
+  { name: 'OpenAI', value: 'OpenAI', logo: OpenAILogo, platform: 'custom', baseUrl: 'https://api.openai.com/v1' },
   {
-    name: 'AWS Bedrock',
-    value: 'AWS-Bedrock',
-    logo: BedrockLogo,
-    platform: 'bedrock',
-    i18nKey: 'settings.platformBedrock',
+    name: 'Gemini',
+    value: 'gemini',
+    logo: GeminiLogo,
+    platform: 'gemini',
+    baseUrl: 'https://generativelanguage.googleapis.com',
   },
   {
     name: 'DeepSeek',
@@ -113,14 +92,9 @@ export const MODEL_PLATFORMS: PlatformConfig[] = [
     platform: 'custom',
     baseUrl: 'https://api.deepseek.com/v1',
   },
-  { name: 'MiniMax', value: 'MiniMax', logo: MiniMaxLogo, platform: 'custom', baseUrl: 'https://api.minimaxi.com/v1' },
-  {
-    name: 'Novita',
-    value: 'Novita',
-    logo: NovitaLogo,
-    platform: 'custom',
-    baseUrl: 'https://api.novita.ai/openai/v1',
-  },
+  { name: 'xAI', value: 'xAI', logo: XaiLogo, platform: 'custom', baseUrl: 'https://api.x.ai/v1' },
+
+  // Aggregators
   {
     name: 'OpenRouter',
     value: 'OpenRouter',
@@ -128,96 +102,20 @@ export const MODEL_PLATFORMS: PlatformConfig[] = [
     platform: 'custom',
     baseUrl: 'https://openrouter.ai/api/v1',
   },
+
+  // Enterprise / cloud
+  { name: 'Gemini (Vertex AI)', value: 'gemini-vertex-ai', logo: GeminiLogo, platform: 'gemini-vertex-ai' },
   {
-    name: 'Dashscope',
-    value: 'Dashscope',
-    logo: QwenLogo,
-    platform: 'custom',
-    baseUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
+    name: 'AWS Bedrock',
+    value: 'AWS-Bedrock',
+    logo: BedrockLogo,
+    platform: 'bedrock',
+    i18nKey: 'settings.platformBedrock',
   },
-  {
-    name: 'Dashscope Coding Plan',
-    value: 'Dashscope-Coding',
-    logo: QwenLogo,
-    platform: 'custom',
-    baseUrl: 'https://coding.dashscope.aliyuncs.com/v1',
-  },
-  {
-    name: 'SiliconFlow-CN',
-    value: 'SiliconFlow-CN',
-    logo: SiliconFlowLogo,
-    platform: 'custom',
-    baseUrl: 'https://api.siliconflow.cn/v1',
-  },
-  {
-    name: 'SiliconFlow',
-    value: 'SiliconFlow',
-    logo: SiliconFlowLogo,
-    platform: 'custom',
-    baseUrl: 'https://api.siliconflow.com/v1',
-  },
-  {
-    name: 'Zhipu',
-    value: 'Zhipu',
-    logo: ZhipuLogo,
-    platform: 'custom',
-    baseUrl: 'https://open.bigmodel.cn/api/paas/v4',
-  },
-  {
-    name: 'Moonshot (China)',
-    value: 'Moonshot',
-    logo: KimiLogo,
-    platform: 'custom',
-    baseUrl: 'https://api.moonshot.cn/v1',
-  },
-  {
-    name: 'Moonshot (Global)',
-    value: 'Moonshot-Global',
-    logo: KimiLogo,
-    platform: 'custom',
-    baseUrl: 'https://api.moonshot.ai/v1',
-  },
-  { name: 'xAI', value: 'xAI', logo: XaiLogo, platform: 'custom', baseUrl: 'https://api.x.ai/v1' },
-  {
-    name: 'Ark',
-    value: 'Ark',
-    logo: VolcengineLogo,
-    platform: 'custom',
-    baseUrl: 'https://ark.cn-beijing.volces.com/api/v3',
-  },
-  {
-    name: 'Qianfan',
-    value: 'Qianfan',
-    logo: BaiduLogo,
-    platform: 'custom',
-    baseUrl: 'https://qianfan.baidubce.com/v2',
-  },
-  {
-    name: 'Hunyuan',
-    value: 'Hunyuan',
-    logo: TencentLogo,
-    platform: 'custom',
-    baseUrl: 'https://api.hunyuan.cloud.tencent.com/v1',
-  },
-  { name: 'Lingyi', value: 'Lingyi', logo: LingyiLogo, platform: 'custom', baseUrl: 'https://api.lingyiwanwu.com/v1' },
-  { name: 'Poe', value: 'Poe', logo: PoeLogo, platform: 'custom', baseUrl: 'https://api.poe.com/v1' },
-  { name: 'PPIO', value: 'PPIO', logo: PPIOLogo, platform: 'custom', baseUrl: 'https://api.ppinfra.com/v3/openai' },
-  {
-    name: 'ModelScope',
-    value: 'ModelScope',
-    logo: ModelScopeLogo,
-    platform: 'custom',
-    baseUrl: 'https://api-inference.modelscope.cn/v1',
-  },
-  {
-    name: 'InfiniAI',
-    value: 'InfiniAI',
-    logo: InfiniAILogo,
-    platform: 'custom',
-    baseUrl: 'https://cloud.infini-ai.com/maas/v1',
-  },
-  { name: 'Ctyun', value: 'Ctyun', logo: CtyunLogo, platform: 'custom', baseUrl: 'https://wishub-x1.ctyun.cn/v1' },
-  { name: 'StepFun', value: 'StepFun', logo: StepFunLogo, platform: 'custom', baseUrl: 'https://api.stepfun.com/v1' },
+
+  // Custom / advanced
+  { name: 'Custom', value: 'custom', logo: null, platform: 'custom', i18nKey: 'settings.platformCustom' },
+  { name: 'New API', value: 'new-api', logo: NewApiLogo, platform: 'new-api', i18nKey: 'settings.platformNewApi' },
 ];
 
 /**

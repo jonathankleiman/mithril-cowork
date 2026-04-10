@@ -36,6 +36,8 @@ import {
   BUILTIN_IMAGE_GEN_ID,
   BUILTIN_IMAGE_GEN_LEGACY_NAMES,
   BUILTIN_IMAGE_GEN_NAME,
+  MITHRIL_LEGAL_ID,
+  MITHRIL_LEGAL_NAME,
 } from '../resources/builtinMcp/constants';
 // Platform and architecture types (moved from deleted updateConfig)
 type PlatformType = 'win32' | 'darwin' | 'linux';
@@ -784,9 +786,59 @@ const ensureBuiltinMcpServers = async (): Promise<void> => {
       changed = true;
     }
 
+    // ── Mithril Legal Tools MCP server ────────────────────────────────────
+    const legalScriptPath = getBuiltinMcpScriptPath('builtin-mcp-legal-tools');
+    const legalExistingIdx = mcpServers.findIndex((s) => s.builtin === true && s.id === MITHRIL_LEGAL_ID);
+
+    if (legalExistingIdx >= 0) {
+      // Update path if app location changed
+      const existing = mcpServers[legalExistingIdx];
+      if (
+        existing.transport.type === 'stdio' &&
+        existing.transport.command === 'node' &&
+        (existing.transport.args || [])[0] !== legalScriptPath
+      ) {
+        mcpServers[legalExistingIdx] = {
+          ...existing,
+          transport: { ...existing.transport, args: [legalScriptPath] },
+          originalJson: JSON.stringify(
+            { [MITHRIL_LEGAL_NAME]: { command: 'node', args: [legalScriptPath] } },
+            null,
+            2
+          ),
+          updatedAt: now,
+        };
+        changed = true;
+      }
+    } else {
+      // Create Mithril Legal Tools server — enabled by default for law firm use
+      const legalServer: IMcpServer = {
+        id: MITHRIL_LEGAL_ID,
+        name: MITHRIL_LEGAL_NAME,
+        description:
+          'Ontario legal tools: limitation calculator, filing fees, citation formatter, conflict check, jurisdiction check, service deadlines.',
+        enabled: true,
+        builtin: true,
+        transport: {
+          type: 'stdio',
+          command: 'node',
+          args: [legalScriptPath],
+        },
+        createdAt: now,
+        updatedAt: now,
+        originalJson: JSON.stringify(
+          { [MITHRIL_LEGAL_NAME]: { command: 'node', args: [legalScriptPath] } },
+          null,
+          2
+        ),
+      };
+      mcpServers.push(legalServer);
+      changed = true;
+    }
+
     if (changed) {
       await configFile.set('mcp.config', mcpServers);
-      console.log('[AionUi] Built-in MCP servers ensured');
+      console.log('[Mithril Cowork] Built-in MCP servers ensured');
     }
 
     // Clear old switch flag after migration
@@ -1087,6 +1139,7 @@ export {
   getAutoSkillsDir,
   getCronSkillsDir,
   BUILTIN_IMAGE_GEN_ID,
+  MITHRIL_LEGAL_ID,
   getBuiltinMcpScriptPath,
 };
 

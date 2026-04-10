@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 80 80" fill="none">
+<title>Mithril Cowork</title>
+<circle cx="40" cy="40" r="40" fill="#3d6b4a"/>
+<!-- Shield -->
+<path d="M40 12 L62 23 L62 46 Q62 62 40 70 Q18 62 18 46 L18 23 Z"
+      fill="none" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+<!-- Sword blade -->
+<line x1="40" y1="22" x2="40" y2="52" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+<!-- Crossguard -->
+<line x1="33" y1="50" x2="47" y2="50" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<!-- Pommel -->
+<circle cx="40" cy="57" r="1.8" fill="white"/>
+<!-- Scale left -->
+<path d="M28 33 L28 27 L40 22" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M24 33 Q28 37 32 33" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<!-- Scale right -->
+<path d="M52 33 L52 27 L40 22" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M48 33 Q52 37 56 33" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+</svg>

@@ -39,6 +39,11 @@ async function main() {
     }),
     esbuild.build({
       ...SHARED_OPTIONS,
+      entryPoints: [path.join(ROOT, 'src/process/resources/builtinMcp/mithrilLegalServer.ts')],
+      outfile: path.join(ROOT, 'out/main/builtin-mcp-legal-tools.js'),
+    }),
+    esbuild.build({
+      ...SHARED_OPTIONS,
       entryPoints: [path.join(ROOT, 'src/process/resources/teamMcp/teamMcpStdio.ts')],
       outfile: path.join(ROOT, 'out/main/team-mcp-stdio.js'),
     }),

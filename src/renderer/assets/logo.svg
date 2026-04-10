@@ -1,8 +1,17 @@
 <svg class="w-5.5 h-5.5 absolute inset-0 m-auto" viewBox="0 0 80 80" fill="none">
-                            <!-- 上方的"^"代表A - 更圆润的线条 -->
-                            <path d="M40 20 Q38 22 25 40 Q23 42 26 42 L30 42 Q32 40 40 30 Q48 40 50 42 L54 42 Q57 42 55 40 Q42 22 40 20" fill="white"></path>
-                            <!-- 中间的"."代表i - 中心圆点 -->
-                            <circle cx="40" cy="46" r="3" fill="white"></circle>
-                            <!-- 下方的弧线代表UI - 更圆润的底部弧线 -->
-                            <path d="M18 50 Q40 70 62 50" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"></path>
-                        </svg>
+  <!-- Mithril shield outline -->
+  <path d="M40 10 L64 22 L64 48 Q64 66 40 74 Q16 66 16 48 L16 22 Z"
+        fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Sword blade (vertical line) -->
+  <line x1="40" y1="22" x2="40" y2="54" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <!-- Sword crossguard -->
+  <line x1="32" y1="52" x2="48" y2="52" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Sword pommel -->
+  <circle cx="40" cy="60" r="2" fill="white"/>
+  <!-- Scale of justice left -->
+  <path d="M28 34 L28 28 L40 22" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M24 34 Q28 38 32 34" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Scale of justice right -->
+  <path d="M52 34 L52 28 L40 22" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M48 34 Q52 38 56 34" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>
