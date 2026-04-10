@@ -32,7 +32,7 @@ export const BUILTIN_TAB_IDS = [
   'capabilities',
   'display',
   'webui',
-  'pet',
+  // 'pet', // Disabled — not relevant for Mithril Cowork
   'system',
   'about',
 ] as const;
@@ -164,7 +164,7 @@ const SettingsSider: React.FC<{ collapsed?: boolean; tooltipEnabled?: boolean }>
         icon: isDesktop ? <Earth /> : <Communication />,
         path: 'webui',
       },
-      pet: { id: 'pet', label: t('pet.desktopPet'), icon: <Cat />, path: 'pet' },
+      // pet: { id: 'pet', label: t('pet.desktopPet'), icon: <Cat />, path: 'pet' }, // Disabled for Mithril Cowork
       system: { id: 'system', label: t('settings.system'), icon: <System />, path: 'system' },
       about: { id: 'about', label: t('settings.about'), icon: <Info />, path: 'about' },
     };

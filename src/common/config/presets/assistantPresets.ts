@@ -307,67 +307,7 @@ export const ASSISTANT_PRESETS: AssistantPreset[] = [
       ],
     },
   },
-  {
-    id: 'star-office-helper',
-    avatar: '📺',
-    presetAgentType: 'gemini',
-    resourceDir: 'src/process/resources/assistant/star-office-helper',
-    ruleFiles: {
-      'en-US': 'star-office-helper.md',
-      'zh-CN': 'star-office-helper.zh-CN.md',
-    },
-    defaultEnabledSkills: ['star-office-helper'],
-    nameI18n: {
-      'en-US': 'Star Office Helper',
-      'zh-CN': 'Star Office 助手',
-      'ru-RU': 'Помощник Star Office',
-    },
-    descriptionI18n: {
-      'en-US': 'Install, connect, and troubleshoot Star-Office-UI visualization for Aion preview.',
-      'zh-CN': '用于在 Aion 预览中安装、连接并排查 Star-Office-UI 可视化问题。',
-      'ru-RU':
-        'Помогает установить, подключить и диагностировать визуализацию Star-Office-UI для предпросмотра в Aion.',
-    },
-    promptsI18n: {
-      'en-US': [
-        'Set up Star Office on my machine',
-        'Fix Unauthorized on Star Office page',
-        'Connect Aion preview to http://127.0.0.1:19000',
-      ],
-      'zh-CN': ['帮我安装 Star Office', '排查 Star Office Unauthorized', '把 Aion 预览连接到 http://127.0.0.1:19000'],
-    },
-  },
-  {
-    id: 'openclaw-setup',
-    avatar: '🦞',
-    presetAgentType: 'gemini',
-    resourceDir: 'src/process/resources/assistant/openclaw-setup',
-    ruleFiles: {
-      'en-US': 'openclaw-setup.md',
-      'zh-CN': 'openclaw-setup.zh-CN.md',
-    },
-    defaultEnabledSkills: ['openclaw-setup', 'aionui-webui-setup'],
-    nameI18n: {
-      'en-US': 'OpenClaw Setup Expert',
-      'zh-CN': 'OpenClaw 部署专家',
-      'ru-RU': 'Эксперт по настройке OpenClaw',
-    },
-    descriptionI18n: {
-      'en-US':
-        'Expert guide for installing, deploying, configuring, and troubleshooting OpenClaw. Proactively helps with setup, diagnoses issues, and provides security best practices.',
-      'zh-CN': 'OpenClaw 安装、部署、配置和故障排查专家。主动协助设置、诊断问题并提供安全最佳实践。',
-      'ru-RU':
-        'Эксперт по установке, развёртыванию, настройке и устранению неполадок OpenClaw. Помогает пройти настройку, диагностирует проблемы и подсказывает безопасные практики.',
-    },
-    promptsI18n: {
-      'en-US': [
-        'Help me install OpenClaw step by step',
-        "My OpenClaw isn't working, please diagnose the issue",
-        'Configure Telegram channel for OpenClaw integration',
-      ],
-      'zh-CN': ['帮我一步步安装 OpenClaw', '我的 OpenClaw 出问题了，请帮我诊断', '为 OpenClaw 配置 Telegram 渠道'],
-    },
-  },
+  // Removed: star-office-helper, openclaw-setup (not relevant for legal workspace)
   {
     id: 'cowork',
     avatar: 'cowork.svg',
@@ -460,34 +400,7 @@ export const ASSISTANT_PRESETS: AssistantPreset[] = [
   //     ],
   //   },
   // },
-  {
-    id: 'game-3d',
-    avatar: '🎮',
-    presetAgentType: 'gemini',
-    resourceDir: 'src/process/resources/assistant/game-3d',
-    ruleFiles: {
-      'en-US': 'game-3d.md',
-      'zh-CN': 'game-3d.zh-CN.md',
-    },
-    nameI18n: {
-      'en-US': '3D Game',
-      'zh-CN': '3D 游戏生成',
-      'ru-RU': 'Генератор 3D-игр',
-    },
-    descriptionI18n: {
-      'en-US': 'Generate a complete 3D platform collection game in one HTML file.',
-      'zh-CN': '用单个 HTML 文件生成完整的 3D 平台收集游戏。',
-      'ru-RU': 'Генерирует полноценную 3D-игру-платформер со сбором предметов в одном HTML-файле.',
-    },
-    promptsI18n: {
-      'en-US': [
-        'Create a 3D platformer game with jumping mechanics',
-        'Make a coin collection game with obstacles',
-        'Build a 3D maze exploration game',
-      ],
-      'zh-CN': ['创建一个带跳跃机制的 3D 平台游戏', '制作一个带障碍物的金币收集游戏', '构建一个 3D 迷宫探索游戏'],
-    },
-  },
+  // Removed: game-3d (not relevant for legal workspace)
   {
     id: 'ui-ux-pro-max',
     avatar: '🎨',
@@ -548,111 +461,7 @@ export const ASSISTANT_PRESETS: AssistantPreset[] = [
       'zh-CN': ['规划一个包含里程碑的全面重构任务', '将功能实现拆分为可执行的步骤', '创建迁移到新框架的项目计划'],
     },
   },
-  {
-    id: 'human-3-coach',
-    avatar: '🧭',
-    presetAgentType: 'gemini',
-    resourceDir: 'src/process/resources/assistant/human-3-coach',
-    ruleFiles: {
-      'en-US': 'human-3-coach.md',
-      'zh-CN': 'human-3-coach.zh-CN.md',
-    },
-    nameI18n: {
-      'en-US': 'HUMAN 3.0 Coach',
-      'zh-CN': 'HUMAN 3.0 教练',
-      'ru-RU': 'Коуч HUMAN 3.0',
-    },
-    descriptionI18n: {
-      'en-US':
-        'Personal development coach based on HUMAN 3.0 framework: 4 Quadrants (Mind/Body/Spirit/Vocation), 3 Levels, 3 Growth Phases.',
-      'zh-CN': '基于 HUMAN 3.0 框架的个人发展教练：4 象限（思维/身体/精神/职业）、3 层次、3 成长阶段。',
-      'ru-RU':
-        'Коуч по личному развитию на основе фреймворка HUMAN 3.0: 4 квадранта (ум, тело, дух, призвание), 3 уровня и 3 фазы роста.',
-    },
-    promptsI18n: {
-      'en-US': [
-        'Help me set quarterly goals across all life quadrants',
-        'Reflect on my career progress and plan next steps',
-        'Create a personal development plan for the next 3 months',
-      ],
-      'zh-CN': [
-        '帮我设定涵盖所有生活象限的季度目标',
-        '反思我的职业发展进度并规划下一步',
-        '为未来 3 个月创建个人发展计划',
-      ],
-    },
-  },
-  {
-    id: 'social-job-publisher',
-    avatar: '📣',
-    presetAgentType: 'gemini',
-    resourceDir: 'src/process/resources/assistant/social-job-publisher',
-    ruleFiles: {
-      'en-US': 'social-job-publisher.md',
-      'zh-CN': 'social-job-publisher.zh-CN.md',
-    },
-    skillFiles: {
-      'en-US': 'social-job-publisher-skills.md',
-      'zh-CN': 'social-job-publisher-skills.zh-CN.md',
-    },
-    defaultEnabledSkills: ['xiaohongshu-recruiter', 'x-recruiter'],
-    nameI18n: {
-      'en-US': 'Social Job Publisher',
-      'zh-CN': '社交招聘发布助手',
-      'ru-RU': 'Публикатор вакансий в соцсетях',
-    },
-    descriptionI18n: {
-      'en-US': 'Expand hiring requests into a full JD, images, and publish to social platforms via connectors.',
-      'zh-CN': '扩写招聘需求为完整 JD 与图片，并通过 connector 发布到社交平台。',
-      'ru-RU':
-        'Разворачивает запрос на найм в полноценное описание вакансии и изображения, а затем публикует это в соцсетях через коннекторы.',
-    },
-    promptsI18n: {
-      'en-US': [
-        'Create a comprehensive job post for Senior Full-Stack Engineer',
-        'Draft an engaging hiring tweet for social media',
-        'Create a multi-platform job posting (LinkedIn, X, Redbook)',
-      ],
-      'zh-CN': [
-        '创建一份高级全栈工程师的完整招聘启事',
-        '起草一条适合社交媒体的招聘推文',
-        '创建多平台职位发布（LinkedIn、X、小红书）',
-      ],
-    },
-  },
-  {
-    id: 'moltbook',
-    avatar: '🦞',
-    presetAgentType: 'gemini',
-    resourceDir: 'src/process/resources/assistant/moltbook',
-    ruleFiles: {
-      'en-US': 'moltbook.md',
-      'zh-CN': 'moltbook.md',
-    },
-    skillFiles: {
-      'en-US': 'moltbook-skills.md',
-      'zh-CN': 'moltbook-skills.zh-CN.md',
-    },
-    defaultEnabledSkills: ['moltbook'],
-    nameI18n: {
-      'en-US': 'moltbook',
-      'zh-CN': 'moltbook',
-      'ru-RU': 'moltbook',
-    },
-    descriptionI18n: {
-      'en-US': 'The social network for AI agents. Post, comment, upvote, and create communities.',
-      'zh-CN': 'AI 代理的社交网络。发帖、评论、投票、创建社区。',
-      'ru-RU': 'Социальная сеть для AI-агентов: публикации, комментарии, голосования и создание сообществ.',
-    },
-    promptsI18n: {
-      'en-US': [
-        'Check my moltbook feed for latest updates',
-        'Post an interesting update to moltbook',
-        'Check for new direct messages',
-      ],
-      'zh-CN': ['查看我的 moltbook 最新动态', '在 moltbook 发布一条有趣的动态', '检查是否有新私信'],
-    },
-  },
+  // Removed: human-3-coach, social-job-publisher, moltbook (not relevant for legal workspace)
   {
     id: 'beautiful-mermaid',
     avatar: '📈',
@@ -683,38 +492,10 @@ export const ASSISTANT_PRESETS: AssistantPreset[] = [
       'zh-CN': ['绘制详细的用户登录认证流程图', '创建支付处理的 API 时序图', '创建系统架构图'],
     },
   },
-  {
-    id: 'story-roleplay',
-    avatar: '📖',
-    presetAgentType: 'gemini',
-    resourceDir: 'src/process/resources/assistant/story-roleplay',
-    ruleFiles: {
-      'en-US': 'story-roleplay.md',
-      'zh-CN': 'story-roleplay.zh-CN.md',
-    },
-    defaultEnabledSkills: ['story-roleplay'],
-    nameI18n: {
-      'en-US': 'Story Roleplay',
-      'zh-CN': '故事角色扮演',
-      'ru-RU': 'Ролевые истории',
-    },
-    descriptionI18n: {
-      'en-US':
-        'Immersive story roleplay. Start by: 1) Natural language to create characters, 2) Paste PNG images, or 3) Open folder with character cards (PNG/JSON) and world info.',
-      'zh-CN':
-        '沉浸式故事角色扮演。三种开始方式：1) 自然语言直接对话创建角色，2) 直接粘贴PNG图片，3) 打开包含角色卡（PNG/JSON）和世界书的文件夹。',
-      'ru-RU':
-        'Иммерсивный сюжетный ролевой режим. Можно начать тремя способами: описать персонажей словами, вставить PNG-изображения или открыть папку с карточками персонажей и лором мира.',
-    },
-    promptsI18n: {
-      'en-US': [
-        'Start an epic fantasy adventure with a brave warrior',
-        'Create a detailed character with backstory and personality',
-        'Begin an interactive story in a sci-fi setting',
-      ],
-      'zh-CN': ['开始一个勇敢战士的史诗奇幻冒险', '创建一个有背景故事和个性的详细角色', '在科幻设定中开始一个互动故事'],
-    },
-  },
+  // Removed: story-roleplay (not relevant for legal workspace)
+  // {
+  //   id: 'story-roleplay',
+  // (story-roleplay removed)
   // ── Mithril Law Legal Assistants ──────────────────────────────────
   {
     id: 'mithril-general',
