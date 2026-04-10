@@ -212,6 +212,7 @@ asarUnpack:
   # at startup, so all runtime reads go through the user directory, not asar.
   # Builtin MCP server scripts must be unpacked so external node processes can execute them
   - 'out/main/builtin-mcp-image-gen.js'
+  - 'out/main/builtin-mcp-legal-tools.js'
   - 'out/main/team-mcp-stdio.js'
   - 'out/main/aion-mcp-stdio.js'
 
@@ -225,7 +226,7 @@ electronDownload:
 
 publish:
   provider: github
-  owner: mithril-law
+  owner: jonathankleiman
   repo: mithril-cowork
   publishAutoUpdate: true
   releaseType: release
